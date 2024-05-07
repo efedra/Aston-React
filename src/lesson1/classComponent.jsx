@@ -18,6 +18,21 @@ class ClassComponent extends Component {
         })
     }
 
+    componentDidMount() {
+        console.log(' componentDidMount')
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount')
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('componentDidUpdate', prevState)
+    }
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('getSnapshotBeforeUpdate')
+        return {name:"hello"}
+    }
+
+
     render() {
         return (
             <div>
